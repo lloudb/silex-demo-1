@@ -37,7 +37,7 @@
   })->after($hdrs);
 
   $app->get('/pow/{n1}/{n2}', function ($n1, $n2) use($app) {
-    return '<h2>Возведение в степень: </h2><h3>' . (Math.pow($n1,$n2)) . '</h3>'; 
+    return '<h2>Возведение в степень: </h2><h3>' . (pow($n1,$n2)) . '</h3>'; 
   })->after($hdrs);
 
   $app->get('/authors', function () use($app) {
