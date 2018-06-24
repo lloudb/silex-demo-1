@@ -20,12 +20,24 @@
     ));  
   });
   
-  $app->get('/add/{n1}/{n2}', function ($n1, $n2) use($app) {
+  $app->get('/plus/{n1}/{n2}', function ($n1, $n2) use($app) {
     return '<h2>Сумма: </h2><h3>' . ($n1 + $n2) . '</h3>'; 
   })->after($hdrs);
 
-  $app->get('/remive/{n1}/{n2}', function ($n1, $n2) use($app) {
+  $app->get('/minus/{n1}/{n2}', function ($n1, $n2) use($app) {
     return '<h2>Вычитание: </h2><h3>' . ($n1 - $n2) . '</h3>'; 
+  })->after($hdrs);
+
+  $app->get('/mult/{n1}/{n2}', function ($n1, $n2) use($app) {
+    return '<h2>Вычитание: </h2><h3>' . ($n1 - $n2) . '</h3>'; 
+  })->after($hdrs);
+
+  $app->get('/div/{n1}/{n2}', function ($n1, $n2) use($app) {
+    return '<h2>Вычитание: </h2><h3>' . ($n1 - $n2) . '</h3>'; 
+  })->after($hdrs);
+
+  $app->get('/authors', function () use($app) {
+    return '<h3>Трофимов Дмитрий, Ольга Стуклова, Анастасия Андреева, Зайнитдинов Роберт</h3>'; 
   })->after($hdrs);
 
   $app->error(function ($e) use($app) {
